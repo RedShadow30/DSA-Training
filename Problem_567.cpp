@@ -6,10 +6,8 @@
 class Solution {
 public:
     bool isEqual(int arr1[26], int arr2[26]) {
-        int size = sizeof(arr1)/sizeof(int);
-
-        // Traverse and make sure all values in both arrays match
-        for(int i = 0; i < size; ++i) {
+        // Traverse and make sure ALL 26 elements in both arrays match.
+        for(int i = 0; i < 26; ++i) {
             if(arr1[i] != arr2[i]) return false;
         }
         return true;
@@ -54,4 +52,10 @@ public:
 /*
     Time Complexity: O(N2) because goes through all chars in s2 to update frequency.  Space Complexity: O(1) since data is stored in variables and arrays that have O(1) access.
     Substring is when letters must be adjacent, no intruder letters.
+*/
+
+/*
+   Explanation: Use a fixed sliding window to count frequency of letters of both strings in that window. Compare if the same else traverse rest of the second string (s2) maintaining the window size. 
+   Increase the frequency of the newly added letter and decrease the frequency of the removed letter as we shift the window. Compare if the arrays have the same frequency of letters in that window.
+   Return if matching elements. Finally return false if never had a window where both arrays had same values in elements.
 */
