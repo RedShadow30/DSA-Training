@@ -13,50 +13,29 @@ public:
         // ans vector to return
         vector<int> ans;
 
-        // Two pointers: start and start+2 for window size of p.length()-1
-        int st, end = p.length()-1;
+        // store the frequency of each letter in vector
+        vector<int> mapW(26, 0);
+        vector<int> mapP(26, 0);
 
-        // hashmaps to store char freq in window and p
-        unordered_map <char, int> mapW;
-        unordered_map <char, int> mapP;
-
-        // store current frequency of characters in first window
-        for(st = 0; st <= end; st++) {
-            mapW[s[st]]++;
-            mapP[p[st]]++;
+        // Increase freq of each letter in p (target)
+        for(auto x : p) {
+            mapP[x - 'a']++;
+        }
+        // Increase freq of each letter in first window
+        for(int i = 0; i < p.length(); i++) {
+            mapW[s[i] - 'a']++;
         }
 
         if(mapW == mapP) ans.push_back(0);
 
-        st = 1;
-        // traverse the list with window size of three start at st=1 and end=3
-        while(end < s.length()-1) {
-            end++;
+        for(int i = p.length(); i < s.length(); i++) {
             // Delete char freq of old
-            mapW[s[st-1]]--;
-            cout << "st=" << s[st-1] << " " << mapW[s[st-1]] << endl;
-
+            mapW[s[i-p.length()] - 'a']--;
+           
             // Add new char to hashmap
-            mapW[s[end]]++;
-            cout << "end=" << s[end] << " " << mapW[s[end]] << endl;
+            mapW[s[i] - 'a']++;
 
-            for(char m : p) cout << m << ":" << mapW[m] << " ";
-            cout << endl;
-            for(char m : p) cout << m << ":" << mapP[m] << " ";
-
-            // if hashmap of p and window are equal then add st index to ans
-            cout << "st=" << st;
-             if(mapW == mapP){
-                cout << "true";
-             }
-             else {
-                cout << "false";
-             }
-             cout << endl;
-
-            if(mapW == mapP) ans.push_back(st);
-            st++;
-            cout << endl;
+            if(mapW == mapP) ans.push_back(i-p.length()+1);
         }
 
         return ans;
@@ -65,7 +44,6 @@ public:
 
 /* Time Complexity: O(N) where N is the length of string s. Space Complexity: O(N) where N is the length of string P.
    Need to continue working on this problem.
-   Explanation: There are two hashmaps that store the frequency of the characters in the window. The window is size p.length() and is used to compare the frequency of the characters within the window and to the 
-   frequency of characters in the string p. If they match then the starting index st is added to the ans vector. At the end, ans is returned.
-   Bug: Line 57 where mapW == mapP return false even though they have the same frequency of characters. Works for the first window but not the next windows. May need to revise how the string is traversed.
+   Explanation: There are two vectors that store the frequency of the characters in the window. The window is size p.length() and is used to compare the frequency of the characters within the window and to the 
+   frequency of characters in the string p. If they match then the starting index of current window, i-p.length()+1, is added to the ans vector. At the end, ans is returned.
 */
