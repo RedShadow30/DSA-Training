@@ -10,4 +10,6 @@ Days Completed:
 - [x] Day 12
 - [x] Day 13
 - [x] Day 14
-- [ ] Day 15
+- [x] Day 15
+- [ ] Day 16
+- [ ] Day 17
