@@ -21,7 +21,7 @@ public:
 };
 
 
-/* Time Complexity:         Space Complexity: 
+/* Time Complexity: O(N) because traverses nums list.   Space Complexity: O(N) where worst case is all numbers in nums are unique. N numbers stored.
    Explanation: Since we need to return true as soon as ANY num reaches a freq >= 2. We can keep track of each
    number's frequency using a hashmap. If the number's freq reaches 2 or above then we return true else we continue.
    Once we exit the loop, it means that all the nums were unique there for we return false.
