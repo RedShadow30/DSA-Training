@@ -7,5 +7,6 @@ At least 1 problem per day is the what I am striving for to improve my Data Stru
 Days Completed:
 - [x] Days 1 - 10
 - [x] Day 11 - 20
-- [ ] Day 21
-- [ ] Day 22
+- [x] Day 21 
+- [ ] Day 22 
+- [ ] Day 23 
