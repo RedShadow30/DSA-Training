@@ -38,7 +38,11 @@ public:
     }
 };
 
+<<<<<<< HEAD
 /*  Time Complexity: O(N)    Space Complexity: O(N) since we are storing nums in vectors. N would be number of leaf nodes.
+=======
+/*  Time Complexity: O()    Space Complexity: O(N) since we are storing nums in vectors. N would be number of leaf nodes.
+>>>>>>> 48b2fd72e4c52172862f7f267374a0317fd3f163
     Explanation: We create a helper function called dfs to traverse the binary tree. We add the node's val to it's respective list IFF
     the node points to null on left and right. If the current node is null then we are done traversing that branch. The two
     vectors are compared at the end.
