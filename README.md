@@ -8,8 +8,13 @@ Days Completed:
 - [x] Days 1 - 10
 - [x] Days 11 - 20
 - [x] Days 21 - 30
-- [x] Day 31
-- [x] Day 32
-- [x] Day 33
-- [ ] Day 34
-- [ ] Day 35
+- [x] Days 31 - 40 
+- [ ] Day 41
+- [ ] Day 42
+- [ ] Day 43
+- [ ] Day 44
+- [ ] Day 45
+- [ ] Day 46
+- [ ] Day 47
+- [ ] Day 48
+- [ ] Day 49
