@@ -9,7 +9,7 @@ Days Completed:
 - [x] Days 11 - 20
 - [x] Days 21 - 30
 - [x] Days 31 - 40 
-- [ ] Day 41
+- [x] Day 41
 - [ ] Day 42
 - [ ] Day 43
 - [ ] Day 44
