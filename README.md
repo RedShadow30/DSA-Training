@@ -13,7 +13,7 @@ Days Completed:
 - [x] Day 42
 - [x] Day 43
 - [x] Day 44
-- [ ] Day 45
+- [x] Day 45
 - [ ] Day 46
 - [ ] Day 47
 - [ ] Day 48
